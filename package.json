@@ -1,11 +1,11 @@
 {
   "name": "node-express-bootstrap3-template",
   "version": "0.0.1",
-  "description": "A template for express based, boostrapped template",
+  "description": "A template for express, NodeJS and twitter bootstrap, with mocha for testing",
   "main": "app.js",
   "scripts": {
     "test": "mocha",
-    "start": "nohup node app.js --APP007 &"
+    "start": "nohup node app.js &"
   },
   "repository": {
     "type": "git",
@@ -27,6 +27,8 @@
     "mocha": "~1.12.0",
     "should": "~1.2.2",
     "jade": "~0.34.1",
-    "colors": "~0.6.1"
+    "colors": "~0.6.1",
+    "npid": "~0.3.2",
+    "winston": "~0.7.2"
   }
 }

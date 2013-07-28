@@ -1,4 +1,5 @@
 /*jshint: laxcomma:true */
+
 var fs = require('fs');
 var cluster = require('cluster');
 var numCPUs = require('os').cpus().length;
@@ -10,6 +11,7 @@ var cfg = require(path.join(__dirname, 'configuration', "config"));
 var app = express();
 var env = (process.env.NODE_ENV || 'DEVELOPMENT').toLowerCase();
 var Logger = require('winston');
+var npid = require('npid');
 
 
 if (cluster.isMaster) {
@@ -19,6 +21,8 @@ if (cluster.isMaster) {
   }
   return;
 }
+
+npid.create(path.join(__dirname, "pids", ("pid." + process.pid) ));
 
 Logger.log("Initiating worker, pid:" + process.pid);
 
