@@ -1,0 +1,15 @@
+{
+  "application": {
+    "name": "express-template",
+    "title": "Template for express apps"
+  },
+  "database": {
+    "host" : "",
+    "port" : ""
+  },
+  "globals" : {
+  },
+  "logger" :{
+    "log_dir" : "./log/"
+  }
+}
